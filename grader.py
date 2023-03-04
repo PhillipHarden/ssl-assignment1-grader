@@ -1,7 +1,9 @@
 class Grader:
 # method to convert number grades to letter grades
     def convert_grade(self):
-        if self.grade >= 90:
+        if self.grade > 100 or self.grade < 0:
+            raise ValueError("Grade must be between 0 and 100")
+        elif self.grade >= 90:
             return "A"
         elif self.grade >= 80:
             return "B"
