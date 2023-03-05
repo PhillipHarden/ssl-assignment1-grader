@@ -5,7 +5,7 @@ class Grader
       print "What is the name of your assignment? "
       @assignment = gets.chomp
       print "What is the number grade of your assignment? "
-      @grade = Integer(gets.chomp)
+      @grade = Float(gets.chomp)
     end
 
     raise ArgumentError.new("Grade should be between 0 and 100") unless @grade.between?(0, 100)

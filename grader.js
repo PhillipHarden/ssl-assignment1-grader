@@ -26,12 +26,12 @@ class Grader {
         rl.question(
           "What is the number grade of your assignment? ",
           (grade) => {
-            if (!grade || isNaN(grade) || grade % 1 !== 0 || grade > 100) {
+            if (!grade || isNaN(grade) || grade > 100) {
               console.log("Error Message: Grade is required and must be a number between 0 and 100.");
               rl.close();
               return;
             } else {
-              this.grade = parseInt(grade);
+              this.grade = parseFloat(grade);
               let letter_grade = this.convert_grade();
               console.log(
                 `${this.name} got a ${letter_grade} on ${this.assignment}`

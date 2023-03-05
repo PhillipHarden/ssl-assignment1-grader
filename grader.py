@@ -1,5 +1,5 @@
 class Grader:
-# method to convert number grades to letter grades
+    # method to convert number grades to letter grades
     def convert_grade(self):
         if self.grade > 100 or self.grade < 0:
             raise ValueError("Grade must be between 0 and 100")
@@ -14,11 +14,11 @@ class Grader:
         else:
             return "F"
         
-# method to store the user input
+    # method to store the user input
     def __init__(self):
         self.name = input("What is your name? ")
         self.assignment = input("What is the name of your assignment? ")
-        self.grade = int(input("What is the number grade of your assignment? "))       
+        self.grade = float(input("What is the number grade of your assignment? "))       
             
 try:
     grader = Grader()
