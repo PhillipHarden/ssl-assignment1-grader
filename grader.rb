@@ -7,6 +7,9 @@ class Grader
       print "What is the number grade of your assignment? "
       @grade = Integer(gets.chomp)
     end
+
+    raise ArgumentError.new("Grade should be between 0 and 100") unless @grade.between?(0, 100)
+  end
     
     def convert_grade
       if @grade >= 90
