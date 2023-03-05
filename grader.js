@@ -26,7 +26,7 @@ class Grader {
         rl.question(
           "What is the number grade of your assignment? ",
           (grade) => {
-            if (!grade || isNaN(grade) || grade > 100) {
+            if (!grade || isNaN(grade) || grade > 100 || grade < 0) {
               console.log("Error Message: Grade is required and must be a number between 0 and 100.");
               rl.close();
               return;
